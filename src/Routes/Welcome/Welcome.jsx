@@ -6,12 +6,12 @@ function Welcome() {
   return (
     <main className={styles.welcome}>
       <section className={styles.text}>
-        <h1 className={styles.text_title}>Cooking Experience Like a Chef!</h1>
-        <p className={styles.text_description}>
+        <h1 className={styles.textTitle}>Cooking Experience Like a Chef!</h1>
+        <p className={styles.textDescription}>
           Lets make a delicious dish with the best recipe for the family
         </p>
         <Link to="/home">
-          <button className={styles.text_button}>Lets Go!</button>
+          <button className={styles.textButton}>Lets Go!</button>
         </Link>
       </section>
     </main>
