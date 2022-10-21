@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import styles from "./Categories.module.scss";
 
+const categories = ["breakfast", "soup", "dessert", "fingerfood", "drink"];
+
 // eslint-disable-next-line react/prop-types
 function Categories({ searchRecipes }) {
   const [active, setActive] = useState(null);
-
-  const categories = ["breakfast", "soup", "dessert", "fingerfood", "drink"];
 
   const handleButtonClick = (index) => {
     setActive(index);

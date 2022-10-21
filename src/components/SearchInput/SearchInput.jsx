@@ -3,16 +3,16 @@ import styles from "./SearchInput.module.scss";
 import { BsSearch } from "react-icons/bs";
 
 // eslint-disable-next-line react/prop-types
-function SearchForm({ searchRecipes }) {
+function SearchForm({ doRequest }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    searchRecipes(inputValue);
+    doRequest(inputValue);
   };
 
   return (
-    <form className={styles.search} onSubmit={handleSubmit}>
+    <form className={styles.search} onSubmit={(e) => handleSubmit(e)}>
       <label className={styles.searchIcon} htmlFor="search">
         <BsSearch />
       </label>

@@ -8,14 +8,12 @@ import "./styles/main.scss";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/recipe" element={<Recipe />} />
-        <Route path="/create" element={<Create />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/recipe" element={<Recipe />} />
+      <Route path="/create" element={<Create />} />
+    </Routes>
   );
 }
 
