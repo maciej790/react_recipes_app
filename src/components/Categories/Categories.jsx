@@ -1,36 +1,13 @@
-import React, { useState } from "react";
-import clsx from "clsx";
+import React from "react";
+import CategoryButtons from "./CategoryButtons/CategoryButtons";
 import styles from "./Categories.module.scss";
 
-const categories = ["breakfast", "soup", "dessert", "fingerfood", "drink"];
-
 // eslint-disable-next-line react/prop-types
-function Categories({ searchRecipes }) {
-  const [active, setActive] = useState(null);
-
-  const handleButtonClick = (index) => {
-    setActive(index);
-    const category = categories[index];
-    searchRecipes(category);
-  };
-
+function Categories({ handleSearch }) {
   return (
     <section className={styles.categories}>
       <h2>Popular categories:</h2>
-      <ul className={styles.categoriesBox}>
-        {categories.map((category, index) => (
-          <li key={index} className={styles.categoriesItem}>
-            <button
-              className={clsx(styles.categoriesButton, {
-                [styles.active]: index === active,
-              })}
-              onClick={() => handleButtonClick(index)}
-            >
-              {category}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <CategoryButtons handleSearch={handleSearch} />
     </section>
   );
 }
