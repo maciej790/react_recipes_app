@@ -1,4 +1,4 @@
-export const options = {
+export const sliderOptions = {
   perPage: 4,
   arrows: false,
   pagination: false,
