@@ -6,17 +6,18 @@ import { sliderOptions } from "./sliderOptions";
 import "@splidejs/splide/dist/css/splide.min.css";
 import Loader from "../../Loader/Loader";
 
-function Slider({ recipes, isLoading, error }) {
+function Slider({ recipes, isError, isLoading }) {
   if (isLoading) return <Loader />;
-  else if (error) return <p>Error!</p>;
+  else if (isError) return <p>Error!</p>;
 
   return (
     <Splide options={sliderOptions}>
-      {recipes.map(({ id, title, image, readyInMinutes }) => (
-        <SplideSlide key={id}>
-          <RecipeCard title={title} image={image} ready={readyInMinutes} />
-        </SplideSlide>
-      ))}
+      {recipes &&
+        recipes.map(({ id, title, image, readyInMinutes }) => (
+          <SplideSlide key={id}>
+            <RecipeCard title={title} image={image} ready={readyInMinutes} />
+          </SplideSlide>
+        ))}
     </Splide>
   );
 }
