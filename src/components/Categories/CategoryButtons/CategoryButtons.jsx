@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Buttons.module.scss";
+import styles from "./CategoryButtons.module.scss";
 import useActiveIndex from "./useActiveIndex";
 import { categories } from "./categories";
 
