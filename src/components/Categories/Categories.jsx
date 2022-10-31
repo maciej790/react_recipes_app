@@ -1,13 +1,12 @@
 import React from "react";
-import CategoryButtons from "./CategoryButtons/CategoryButtons";
 import styles from "./Categories.module.scss";
+import Buttons from "./Buttons/Buttons";
 
-// eslint-disable-next-line react/prop-types
-function Categories({ handleSearch }) {
+function Categories({ fetchData }) {
   return (
     <section className={styles.categories}>
       <h2>Popular categories:</h2>
-      <CategoryButtons handleSearch={handleSearch} />
+      <Buttons fetchData={fetchData} />
     </section>
   );
 }
